@@ -9,10 +9,10 @@ pip install -r requirements.txt
 ## Start
 
 ```
-gunicorn -c gunicorn.config.py --bind "127.0.0.1:8000" --daemon app:application
+gunicorn -c gunicorn.config.py --bind "0.0.0.0:8000" --daemon app:application
 ```
 
-Apply `sudo` and change port if needed.
+Apply `sudo` and change port to `80` if needed.
 
 ## Stop
 
