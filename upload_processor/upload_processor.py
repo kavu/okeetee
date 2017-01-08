@@ -32,7 +32,7 @@ class UploadProcessor:
     input_path = property(__input_path)
 
     def __http_path(self):
-        return "/" + self.http_dir + self.output_filename
+        return "/" + self.http_dir + "/" + self.output_filename
 
     http_path = property(__http_path)
 
