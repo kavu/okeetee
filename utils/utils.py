@@ -1,6 +1,7 @@
 # coding=utf-8
 import os
+import binascii
 
 
 def get_random():
-    return os.urandom(16).hex()
+    return binascii.b2a_hex(os.urandom(8))
