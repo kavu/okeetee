@@ -49,7 +49,8 @@ class UploadProcessor:
             stdout = subprocess.DEVNULL
 
         # Executing Two Commands
-        subprocess.Popen(['cp', input_path, self.output_path], stdout=stdout)
-        subprocess.Popen(['file', input_path, self.output_path], stdout=stdout)
+        subprocess.Popen(['cp', input_path, self.output_path], stdout=stdout, stderr=stdout)
+        subprocess.Popen(['file', input_path], stdout=stdout, stderr=stdout)
+        subprocess.Popen(['echo', "'Woot'"], stdout=stdout, stderr=stdout)
 
         return self.http_path
